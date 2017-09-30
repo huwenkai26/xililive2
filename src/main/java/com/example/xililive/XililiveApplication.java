@@ -13,7 +13,11 @@ public class XililiveApplication {
 	String home() {
 		return MainActivity.domain();
 	}
-
+	@RequestMapping("/index")
+	@ResponseBody
+	String index(){
+		return "hello world";
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(XililiveApplication.class, args);
 	}
