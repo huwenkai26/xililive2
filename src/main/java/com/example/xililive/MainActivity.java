@@ -8,11 +8,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+import com.google.gson.GsonBuilder;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
@@ -60,14 +62,16 @@ public class MainActivity {
 
                         @Override
                         public void onResponse(Call arg0, Response response) throws IOException {
-
+                            GsonBuilder gsonBuilder = new GsonBuilder().disableHtmlEscaping();
+                            Gson gson = gsonBuilder.create();
                             String result = response.body().string();
-                            BaseEncryptModel baseEncryptModel = new Gson().fromJson(result, BaseEncryptModel.class);
+                            BaseEncryptModel baseEncryptModel = gson.fromJson(result, BaseEncryptModel.class);
 
 //key 1400043672000000
                             String decrypt = AESUtil.decrypt(baseEncryptModel.getOutput(), "1400043672000000");
 //                            System.out.println(decrypt);
-                            roominfo roomBean = new Gson().fromJson(decrypt, roominfo.class);
+
+                            roominfo roomBean =gson.fromJson(decrypt, roominfo.class);
 
 
                             if (roomBean.play_flv!=null&&!roomBean.play_flv.isEmpty()) {
@@ -77,13 +81,13 @@ public class MainActivity {
                                 indexBean.list.get(finalI).play_mp4 = (AESUtil.decrypt(roomBean.play_mp4,"Z#Er3XLGrM00Shsh"));
                             }
                             if (roomBean.play_rtmp!=null&&!roomBean.play_rtmp.isEmpty()) {
-                                indexBean.list.get(finalI).play_rtmp = (AESUtil.decrypt(roomBean.play_rtmp,"Z#Er3XLGrM00Shsh"));
+                                indexBean.list.get(finalI).play_rtmp =  URLDecoder.decode((AESUtil.decrypt(roomBean.play_rtmp,"Z#Er3XLGrM00Shsh")),"utf-8");
                             }
                             if (roomBean.play_url!=null&&!roomBean.play_url.isEmpty()) {
-                                indexBean.list.get(finalI).play_url = (AESUtil.decrypt(roomBean.play_url,"Z#Er3XLGrM00Shsh"));
+                                indexBean.list.get(finalI).play_url = URLDecoder.decode( (AESUtil.decrypt(roomBean.play_url,"Z#Er3XLGrM00Shsh")),"utf-8");
                             }
                             if (roomBean.preview_play_url!=null&&!roomBean.preview_play_url.isEmpty()) {
-                                indexBean.list.get(finalI).play_url = (AESUtil.decrypt(roomBean.preview_play_url,"Z#Er3XLGrM00Shsh"));
+                                indexBean.list.get(finalI).play_url = URLDecoder.decode((AESUtil.decrypt(roomBean.preview_play_url,"Z#Er3XLGrM00Shsh")),"utf-8");
                             }
 
 
@@ -105,7 +109,8 @@ public class MainActivity {
 //                    String json= new String(utf_8, "UTF-8");
 //                    String gbkStr = new String(stringBuilder.toString().getBytes("ISO8859-1"), "GBK"); 
                     String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
-//                    System.out.println(replaceAll);
+                    replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+                    System.out.println(replaceAll);
                     return replaceAll;
 
                 } catch (InterruptedException e) {
