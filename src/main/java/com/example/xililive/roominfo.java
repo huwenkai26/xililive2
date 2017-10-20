@@ -4,81 +4,81 @@ import java.util.List;
 
 public class roominfo {
 
+
     /**
+     * sdk_type : 1
      * pai_id : 0
-     * play_rtmp : d9q9Ipl6Cj5gKhyBuRHZO0fA6ie/SZHwWKSCn0UzT5zrwPdwo39nBztljJ/EymCx+pN+hD0jnLkT6O4w2WGd22plGFl6VeIbhj0EIZsgdSxXXwGEcYxvqrAGk89TlwUgHBKmdU6+orEZ6qOzCpvv6RW1D28VnPBz5+8/5+8vRAg=
+     * play_rtmp : PtU+w4HDMYtQWnq+0DHB5mSwoowKxkF5tVRhOoahJ7/wAjTIvLEDLnUAxgl/lxtO6eYXpoKC8aVVztGBoZ8BifrXyokF+VvuNY8CO1JYiPdNmrZRqiTVMd84t0F3OlX+s/TErNVIvakGt56qG4pTsA==
      * create_type : 0
-     * isencrypt : 1
-     * head_image : ./public/attachment/201709/121751/201709170652297.png
-     * province : 山西
-     * id : 58058
-     * announcement : ★  主播客服QQ：783413682，充值客服QQ：2049640997  ★
+     * head_image : ./public/attachment/201710/19/21/origin/1508389610805515.jpg
+     * act : get_video2
+     * province : 江苏
+     * ctl : video
+     * id : 39417
      * live_in : 1
-     * create_time : 1506274615
-     * max_watch_number : 19887
+     * create_time : 1508436548
+     * max_watch_number : 66420
      * is_vip : 1
      * cate_id : 0
      * private_key :
      * push_url :
-     * test_str : 12
-     * videoCgikey : ucloud.o3pnhfy1.wisser.cn8592d70a
+     * video_title : 直播Live
      * thumb_head_image :
-     * user_id : 121751
+     * user_id : 805515
      * video_vid :
      * live_fee : 0
-     * xpoint : 112.712157
+     * game_log_id : 0
+     * xpoint : 120.636322
      * status : 1
-     * room_id : 58058
+     * room_id : 39417
      * luck_num : 0
      * is_private : 0
-     * viewer : {"watch_number":360,"has_next":1,"page":1,"list":[{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":194359,"v_icon":"","nick_name":"豪 seku","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":106795,"v_icon":"","nick_name":"包装","user_level":"7","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":215682,"v_icon":"","nick_name":"仅此而已","user_level":"5","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":3495,"v_icon":"","nick_name":"全权","user_level":"4","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/135089/1505486678820.png","user_id":135089,"v_icon":"","nick_name":"胖将军","user_level":"4","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":309859,"v_icon":"","nick_name":"冰","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":293861,"v_icon":"","nick_name":"nice","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/267518/201709221153204.png","user_id":267518,"v_icon":"","nick_name":"梦醒时分。","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":254314,"v_icon":"","nick_name":"行者","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":235256,"v_icon":"","nick_name":"?","user_level":"3","is_authentication":"0","is_robot":0}],"status":1}
+     * viewer : {"watch_number":11877,"has_next":1,"page":1,"list":[{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/18/11/origin/1508270381728774.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":728774,"v_icon":"","nick_name":"开心陪伴","sex":"1","user_level":"50","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/14/05/origin/1507902590740392.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":740392,"v_icon":"","nick_name":"天堂正","sex":"1","user_level":"11","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/12/origin/1508357116791759.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":791759,"v_icon":"","nick_name":"南山客","sex":"2","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/17/18/origin/1508205906769624.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":769624,"v_icon":"","nick_name":"The Solitary","sex":"1","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/05/19/origin/1507173850707194.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":707194,"v_icon":"","nick_name":"你是我的心跳","sex":"1","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201709/27/16/59cb62e6f04dd.png?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":811397,"v_icon":"","nick_name":"811397","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/11/13/origin/1507670210724570.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":724570,"v_icon":"","nick_name":"牵挂♂ηî","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/16/15/origin/1508109391700896.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":700896,"v_icon":"","nick_name":"她是我的小傻瓜啊","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/18/origin/1508379661800956.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":800956,"v_icon":"","nick_name":"刘小浪","sex":"1","user_level":"8","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/18/22/origin/1508309194786820.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":786820,"v_icon":"","nick_name":"lucky","sex":"1","user_level":"8","is_authentication":"0","is_robot":0}],"status":1}
      * push_rtmp :
-     * city : 晋中
-     * send_msg_level_limit : 2
+     * city : 苏州
      * title :
      * join_room_prompt : 0
-     * viewer_num : 360
+     * viewer_num : 11877
      * room_title :
-     * monitor_time : 2017-09-25 09:36:55
-     * videoBitrate : 1
-     * publish3_key : AiHEfi5F2dh5aFehZ3EejlVZ4fF6wByoA06svdM96mt35X5CnLawdD5g9PbRfhGI
+     * monitor_time : 2017-10-20 10:09:08
      * is_del_vod : 0
-     * podcast : {"has_admin":0,"cuser":{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":106795,"v_icon":"","nick_name":"包装","sex":"1","num":"2784","user_level":"7","use_ticket":2784,"v_type":""},"show_admin":0,"has_focus":0,"video":{"room_id":"58058","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","live_in":"1","group_id":"58058","user_id":"121751","create_type":"0","live_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","video_type":"1"},"user":{"birthday":"558633600","luck_num":"0","signature":"TA好像忘记签名了","city":"","is_remind":"1","is_robot":"0","room_title":"","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","province":"火星","vip_expire_time":"未开通","id":"121751","focus_count":"0","family_id":0,"ticket":114324,"v_icon":"http://sg1gt6p6.brandstories.cn/public/attachment/201708/06/16/5986d6964c0ea.png","is_vip":"0","sex":"1","is_authentication":"2","emotional_state":"保密","v_type":"0","fans_count":"13820","user_id":"121751","nick_name":"新疆色妃","video_count":"0","user_level":"2","family_chieftain":0,"is_agree":"1","v_explain":"美女","job":"主播","use_diamonds":"0"},"show_tipoff":1}
-     * open_vip : 0
+     * podcast : {"is_forbid":0,"has_admin":0,"cuser":{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/15/18/origin/1508034419749761.jpg","user_id":749761,"v_icon":"","nick_name":"Bab  ♡   Girl","sex":"1","num":"2554","user_level":"33","use_ticket":2554,"v_type":""},"show_admin":0,"has_focus":0,"video":{"room_id":"39417","head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","live_in":"1","group_id":"@TGS#aIUNS25E2","user_id":"805515","create_type":"0","live_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","video_type":"8"},"user":{"birthday":"","luck_num":"0","signature":"TA好像忘记签名了","city":"","is_remind":"1","is_robot":"0","room_title":"","head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","moments":0,"province":"","vip_expire_time":"未开通","id":"805515","weibo_count":0,"focus_count":"1","family_id":"212","ticket":15376,"v_icon":"","is_vip":"0","sex":"2","no_ticket":"0","is_authentication":"2","emotional_state":"保密","v_type":"0","fans_count":"1368","user_id":"805515","nick_name":"MJ  胸妹","video_count":"0","user_level":"1","family_chieftain":0,"is_agree":"1","v_explain":"美女","job":"主播","family":"MJ","use_diamonds":"0"},"show_tipoff":1}
      * is_pay_over : 0
-     * share : {"share_content":"你丑你先睡，我美我直播新疆色妃正在直播,快来一起看~","share_imageUrl":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","share_title":"你丑你先睡，我美我直播","share_key":58058,"share_url":"http://huangfeng.xzjvip.com/wap/index.php?ctl=share&act=live&user_id=121751&video_id=58058&share_id=316393"}
-     * podcast_previous : {"room_id":"58019","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/180550/201709220354456.png"}
+     * share : {"share_content":"我的星光直播，从这里看世界！MJ  胸妹正在直播,快来一起看~","share_imageUrl":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","share_title":"我的星光直播，从这里看世界！","share_key":39417,"share_url":"http://starlight.xgauto.net/wap/index.php?ctl=share&act=live&user_id=805515&video_id=39417&share_id=801561"}
+     * podcast_previous : {"room_id":"39602","head_image":"http://storagexg.xgauto.net/public/attachment/201710/15/10/origin/1508004902702489.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150"}
      * pay_room_id : 0
-     * init_version : 2017051801
-     * play_url : d9q9Ipl6Cj5gKhyBuRHZO0fA6ie/SZHwWKSCn0UzT5zrwPdwo39nBztljJ/EymCx+pN+hD0jnLkT6O4w2WGd22plGFl6VeIbhj0EIZsgdSxXXwGEcYxvqrAGk89TlwUgHBKmdU6+orEZ6qOzCpvv6RW1D28VnPBz5+8/5+8vRAg=
-     * play_hls : bccXrKvBcFxj/9q7FpEh6A==
+     * init_version : 2017010331
+     * play_url : PtU+w4HDMYtQWnq+0DHB5mSwoowKxkF5tVRhOoahJ7/wAjTIvLEDLnUAxgl/lxtO6eYXpoKC8aVVztGBoZ8BifrXyokF+VvuNY8CO1JYiPdNmrZRqiTVMd84t0F3OlX+s/TErNVIvakGt56qG4pTsA==
+     * play_hls : rPtyB2ibcepI+Wa9MkXrdtLr7NWZuaC2In//RmtEUmIYHuXTyHRdCrgmFl8MsDBGPQyCVOtfWdEpKPEJgiN4W/sVe2/E1eJMERoBOwJ+3Go=
      * has_lianmai : 0
-     * play_flv : bccXrKvBcFxj/9q7FpEh6A==
+     * play_flv : e6HLpcwW8h7GOprSuKYEQA==
      * online_status : 1
      * play_mp4 :
-     * podcast_next : {"room_id":"58130","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/9718/1506304843284.png"}
-     * begin_time : 1506274615
-     * ypoint : 37.686842
+     * podcast_next : {"room_id":"39553","head_image":"http://storagexg.xgauto.net/public/attachment/201710/16/16/origin/1508112030740672.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150"}
+     * begin_time : 1508436548
+     * ypoint : 31.422291
      * is_delete : 0
-     * video_type : 1
+     * video_type : 8
      * live_pay_time :
      * share_type :
-     * group_id : 58058
+     * group_id : @TGS#aIUNS25E2
      * sort_num : 2001000
      * live_pay_type : 0
      * live_is_mention : 0
-     * channelid : cjn4VONNi0AdxnbevsneUDEUqKZhKfEcjkAC0AWBPZPGzE6AEB
+     * channelid : 39417_487edd870579a634c9b2
      * room_type : 3
      * is_live_pay : 0
      */
+    public int sdk_type;
     public int pai_id;
     public String play_rtmp;
+    public String preview_play_url;
     public int create_type;
-    public String isencrypt;
     public String head_image;
+    public String act;
     public String province;
+    public String ctl;
     public String id;
-    public String announcement;
     public String live_in;
     public String create_time;
     public String max_watch_number;
@@ -86,12 +86,12 @@ public class roominfo {
     public int cate_id;
     public String private_key;
     public String push_url;
-    public int test_str;
-    public String videoCgikey;
+    public String video_title;
     public String thumb_head_image;
     public String user_id;
     public String video_vid;
     public int live_fee;
+    public int game_log_id;
     public String xpoint;
     public int status;
     public int room_id;
@@ -100,17 +100,13 @@ public class roominfo {
     public ViewerEntity viewer;
     public String push_rtmp;
     public String city;
-    public String send_msg_level_limit;
     public String title;
     public int join_room_prompt;
     public int viewer_num;
     public String room_title;
     public String monitor_time;
-    public int videoBitrate;
-    public String publish3_key;
     public int is_del_vod;
     public PodcastEntity podcast;
-    public int open_vip;
     public int is_pay_over;
     public ShareEntity share;
     public Podcast_previousEntity podcast_previous;
@@ -139,10 +135,10 @@ public class roominfo {
 
     public class ViewerEntity {
         /**
-         * watch_number : 360
+         * watch_number : 11877
          * has_next : 1
          * page : 1
-         * list : [{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":194359,"v_icon":"","nick_name":"豪 seku","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":106795,"v_icon":"","nick_name":"包装","user_level":"7","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":215682,"v_icon":"","nick_name":"仅此而已","user_level":"5","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":3495,"v_icon":"","nick_name":"全权","user_level":"4","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/135089/1505486678820.png","user_id":135089,"v_icon":"","nick_name":"胖将军","user_level":"4","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":309859,"v_icon":"","nick_name":"冰","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":293861,"v_icon":"","nick_name":"nice","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/267518/201709221153204.png","user_id":267518,"v_icon":"","nick_name":"梦醒时分。","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":254314,"v_icon":"","nick_name":"行者","user_level":"3","is_authentication":"0","is_robot":0},{"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":235256,"v_icon":"","nick_name":"?","user_level":"3","is_authentication":"0","is_robot":0}]
+         * list : [{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/18/11/origin/1508270381728774.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":728774,"v_icon":"","nick_name":"开心陪伴","sex":"1","user_level":"50","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/14/05/origin/1507902590740392.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":740392,"v_icon":"","nick_name":"天堂正","sex":"1","user_level":"11","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/12/origin/1508357116791759.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":791759,"v_icon":"","nick_name":"南山客","sex":"2","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/17/18/origin/1508205906769624.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":769624,"v_icon":"","nick_name":"The Solitary","sex":"1","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/05/19/origin/1507173850707194.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":707194,"v_icon":"","nick_name":"你是我的心跳","sex":"1","user_level":"10","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201709/27/16/59cb62e6f04dd.png?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":811397,"v_icon":"","nick_name":"811397","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/11/13/origin/1507670210724570.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":724570,"v_icon":"","nick_name":"牵挂♂ηî","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/16/15/origin/1508109391700896.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":700896,"v_icon":"","nick_name":"她是我的小傻瓜啊","sex":"1","user_level":"9","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/18/origin/1508379661800956.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":800956,"v_icon":"","nick_name":"刘小浪","sex":"1","user_level":"8","is_authentication":"0","is_robot":0},{"head_image":"http://storagexg.xgauto.net/public/attachment/201710/18/22/origin/1508309194786820.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150","user_id":786820,"v_icon":"","nick_name":"lucky","sex":"1","user_level":"8","is_authentication":"0","is_robot":0}]
          * status : 1
          */
         public int watch_number;
@@ -153,11 +149,12 @@ public class roominfo {
 
         public class ListEntity {
             /**
-             * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png
-             * user_id : 194359
+             * head_image : http://storagexg.xgauto.net/public/attachment/201710/18/11/origin/1508270381728774.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150
+             * user_id : 728774
              * v_icon :
-             * nick_name : 豪 seku
-             * user_level : 9
+             * nick_name : 开心陪伴
+             * sex : 1
+             * user_level : 50
              * is_authentication : 0
              * is_robot : 0
              */
@@ -165,6 +162,7 @@ public class roominfo {
             public int user_id;
             public String v_icon;
             public String nick_name;
+            public String sex;
             public String user_level;
             public String is_authentication;
             public int is_robot;
@@ -173,14 +171,16 @@ public class roominfo {
 
     public class PodcastEntity {
         /**
+         * is_forbid : 0
          * has_admin : 0
-         * cuser : {"head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png","user_id":106795,"v_icon":"","nick_name":"包装","sex":"1","num":"2784","user_level":"7","use_ticket":2784,"v_type":""}
+         * cuser : {"head_image":"http://storagexg.xgauto.net/public/attachment/201710/15/18/origin/1508034419749761.jpg","user_id":749761,"v_icon":"","nick_name":"Bab  ♡   Girl","sex":"1","num":"2554","user_level":"33","use_ticket":2554,"v_type":""}
          * show_admin : 0
          * has_focus : 0
-         * video : {"room_id":"58058","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","live_in":"1","group_id":"58058","user_id":"121751","create_type":"0","live_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","video_type":"1"}
-         * user : {"birthday":"558633600","luck_num":"0","signature":"TA好像忘记签名了","city":"","is_remind":"1","is_robot":"0","room_title":"","head_image":"http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png","province":"火星","vip_expire_time":"未开通","id":"121751","focus_count":"0","family_id":0,"ticket":114324,"v_icon":"http://sg1gt6p6.brandstories.cn/public/attachment/201708/06/16/5986d6964c0ea.png","is_vip":"0","sex":"1","is_authentication":"2","emotional_state":"保密","v_type":"0","fans_count":"13820","user_id":"121751","nick_name":"新疆色妃","video_count":"0","user_level":"2","family_chieftain":0,"is_agree":"1","v_explain":"美女","job":"主播","use_diamonds":"0"}
+         * video : {"room_id":"39417","head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","live_in":"1","group_id":"@TGS#aIUNS25E2","user_id":"805515","create_type":"0","live_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","video_type":"8"}
+         * user : {"birthday":"","luck_num":"0","signature":"TA好像忘记签名了","city":"","is_remind":"1","is_robot":"0","room_title":"","head_image":"http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg","moments":0,"province":"","vip_expire_time":"未开通","id":"805515","weibo_count":0,"focus_count":"1","family_id":"212","ticket":15376,"v_icon":"","is_vip":"0","sex":"2","no_ticket":"0","is_authentication":"2","emotional_state":"保密","v_type":"0","fans_count":"1368","user_id":"805515","nick_name":"MJ  胸妹","video_count":"0","user_level":"1","family_chieftain":0,"is_agree":"1","v_explain":"美女","job":"主播","family":"MJ","use_diamonds":"0"}
          * show_tipoff : 1
          */
+        public int is_forbid;
         public int has_admin;
         public CuserEntity cuser;
         public int show_admin;
@@ -191,14 +191,14 @@ public class roominfo {
 
         public class CuserEntity {
             /**
-             * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/06/15/59afa78405df3.png
-             * user_id : 106795
+             * head_image : http://storagexg.xgauto.net/public/attachment/201710/15/18/origin/1508034419749761.jpg
+             * user_id : 749761
              * v_icon :
-             * nick_name : 包装
+             * nick_name : Bab  ♡   Girl
              * sex : 1
-             * num : 2784
-             * user_level : 7
-             * use_ticket : 2784
+             * num : 2554
+             * user_level : 33
+             * use_ticket : 2554
              * v_type :
              */
             public String head_image;
@@ -214,14 +214,14 @@ public class roominfo {
 
         public class VideoEntity {
             /**
-             * room_id : 58058
-             * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png
+             * room_id : 39417
+             * head_image : http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg
              * live_in : 1
-             * group_id : 58058
-             * user_id : 121751
+             * group_id : @TGS#aIUNS25E2
+             * user_id : 805515
              * create_type : 0
-             * live_image : http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png
-             * video_type : 1
+             * live_image : http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg
+             * video_type : 8
              */
             public String room_id;
             public String head_image;
@@ -235,35 +235,39 @@ public class roominfo {
 
         public class UserEntity {
             /**
-             * birthday : 558633600
+             * birthday :
              * luck_num : 0
              * signature : TA好像忘记签名了
              * city :
              * is_remind : 1
              * is_robot : 0
              * room_title :
-             * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png
-             * province : 火星
+             * head_image : http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg
+             * moments : 0
+             * province :
              * vip_expire_time : 未开通
-             * id : 121751
-             * focus_count : 0
-             * family_id : 0
-             * ticket : 114324
-             * v_icon : http://sg1gt6p6.brandstories.cn/public/attachment/201708/06/16/5986d6964c0ea.png
+             * id : 805515
+             * weibo_count : 0
+             * focus_count : 1
+             * family_id : 212
+             * ticket : 15376
+             * v_icon :
              * is_vip : 0
-             * sex : 1
+             * sex : 2
+             * no_ticket : 0
              * is_authentication : 2
              * emotional_state : 保密
              * v_type : 0
-             * fans_count : 13820
-             * user_id : 121751
-             * nick_name : 新疆色妃
+             * fans_count : 1368
+             * user_id : 805515
+             * nick_name : MJ  胸妹
              * video_count : 0
-             * user_level : 2
+             * user_level : 1
              * family_chieftain : 0
              * is_agree : 1
              * v_explain : 美女
              * job : 主播
+             * family : MJ
              * use_diamonds : 0
              */
             public String birthday;
@@ -274,15 +278,18 @@ public class roominfo {
             public String is_robot;
             public String room_title;
             public String head_image;
+            public int moments;
             public String province;
             public String vip_expire_time;
             public String id;
+            public int weibo_count;
             public String focus_count;
-            public int family_id;
+            public String family_id;
             public int ticket;
             public String v_icon;
             public String is_vip;
             public String sex;
+            public String no_ticket;
             public String is_authentication;
             public String emotional_state;
             public String v_type;
@@ -295,17 +302,18 @@ public class roominfo {
             public String is_agree;
             public String v_explain;
             public String job;
+            public String family;
             public String use_diamonds;
         }
     }
 
     public class ShareEntity {
         /**
-         * share_content : 你丑你先睡，我美我直播新疆色妃正在直播,快来一起看~
-         * share_imageUrl : http://xv0le3l9.wisser.cn/public/attachment/201709/121751/201709170652297.png
-         * share_title : 你丑你先睡，我美我直播
-         * share_key : 58058
-         * share_url : http://huangfeng.xzjvip.com/wap/index.php?ctl=share&act=live&user_id=121751&video_id=58058&share_id=316393
+         * share_content : 我的星光直播，从这里看世界！MJ  胸妹正在直播,快来一起看~
+         * share_imageUrl : http://storagexg.xgauto.net/public/attachment/201710/19/21/origin/1508389610805515.jpg
+         * share_title : 我的星光直播，从这里看世界！
+         * share_key : 39417
+         * share_url : http://starlight.xgauto.net/wap/index.php?ctl=share&act=live&user_id=805515&video_id=39417&share_id=801561
          */
         public String share_content;
         public String share_imageUrl;
@@ -316,8 +324,8 @@ public class roominfo {
 
     public class Podcast_previousEntity {
         /**
-         * room_id : 58019
-         * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/180550/201709220354456.png
+         * room_id : 39602
+         * head_image : http://storagexg.xgauto.net/public/attachment/201710/15/10/origin/1508004902702489.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150
          */
         public String room_id;
         public String head_image;
@@ -325,8 +333,8 @@ public class roominfo {
 
     public class Podcast_nextEntity {
         /**
-         * room_id : 58130
-         * head_image : http://xv0le3l9.wisser.cn/public/attachment/201709/9718/1506304843284.png
+         * room_id : 39553
+         * head_image : http://storagexg.xgauto.net/public/attachment/201710/16/16/origin/1508112030740672.jpg?x-oss-process=image/resize,m_mfit,h_150,w_150
          */
         public String room_id;
         public String head_image;
