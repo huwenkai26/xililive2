@@ -2,41 +2,32 @@ package com.example.xililive;
 
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import okhttp3.*;
 
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.URLDecoder;
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import com.google.gson.GsonBuilder;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
-
-public class MainActivity {
+public class MainActivity2 {
 
     private StringBuilder stringBuilder;
     private static String url = "http://starlight.xgauto.net/mapi/index.php";
     private static OkHttpClient client;
     private static CountDownLatch cdl = null;
 
-    public static String domain() {
+
+    public  String domain() {
 
         final StringBuilder stringBuilder = new StringBuilder();
         client = new OkHttpClient.Builder()
                 .connectTimeout(20, TimeUnit.SECONDS)
                 .readTimeout(20, TimeUnit.SECONDS)
                 .build();
+
+
         Request request = new Request.Builder().url(url).build();
 
         Call call = client.newCall(request);
@@ -52,6 +43,7 @@ public class MainActivity {
 
 
                     Call call2 = client.newCall(parseRequestParams(indexBean.list.get(i)));
+
                     call2.enqueue(new Callback() {
 
                         @Override
@@ -62,14 +54,20 @@ public class MainActivity {
 
                         @Override
                         public void onResponse(Call arg0, Response response) throws IOException {
+
                             GsonBuilder gsonBuilder = new GsonBuilder().disableHtmlEscaping();
                             Gson gson = gsonBuilder.create();
                             String result = response.body().string();
+                            System.out.println(result);
+                            if(!result.contains("output")){
+                                cdl2.countDown();
+                                return;
+                            }
                             BaseEncryptModel baseEncryptModel = gson.fromJson(result, BaseEncryptModel.class);
-
+//                            System.out.println(result);
 //key 1400043672000000
                             String decrypt = AESUtil.decrypt(baseEncryptModel.getOutput(), "1400043672000000");
-//                            System.out.println(decrypt);
+
 
                             roominfo roomBean =gson.fromJson(decrypt, roominfo.class);
 
@@ -103,7 +101,7 @@ public class MainActivity {
                 }
                 try {
                     cdl2.await();
-                    stringBuilder.append(new Gson().toJson(indexBean.list));
+                    stringBuilder.append(new Gson().toJson(indexBean));
 //                    writerTolocal(stringBuilder.toString()); 
 //                    byte[] utf_8 = .getBytes("UTF-8");
 //                    String json= new String(utf_8, "UTF-8");
@@ -111,6 +109,7 @@ public class MainActivity {
                     String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
                     replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
                     System.out.println(replaceAll);
+                    writerTolocal(replaceAll);
                     return replaceAll;
 
                 } catch (InterruptedException e) {
@@ -126,13 +125,14 @@ public class MainActivity {
         return null;
     }
 
-    private static void writerTolocal(String string) {
+    private  void writerTolocal(String string) {
         FileOutputStream writerStream;
         try {
             writerStream = new FileOutputStream("json.txt");
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(writerStream, "UTF-8"));
-            writer.write(new Gson().toJson(string));
+            writer.write(string);
             writer.close();
+
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -142,10 +142,34 @@ public class MainActivity {
         }
 
     }
+    private  String readerTolocal() {
+        FileInputStream readerStream;
+        StringBuilder result = new StringBuilder();
+
+        try {
+
+            readerStream = new FileInputStream("json.txt");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(readerStream, "UTF-8"));
+            String s = null;
+            while((s = reader.readLine())!=null){//使用readLine方法，一次读一行
+                result.append(System.lineSeparator()+s);
+            }
+
+            reader.close();
+            return result.toString();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    return "";
+    }
 
 
 
-    public static Request parseRequestParams(IndexBean.ListEntity listbean) {
+    public  Request parseRequestParams(IndexBean.ListEntity listbean) {
 
         //key ---> 1400043672000000 json -->{"screen_width":720,"screen_height":1280,"sdk_type":"android","sdk_version_name":"2.3.3","sdk_version":2017091501,"xpoint":113.908448,"ypoint":22.548354,"ctl":"video","act":"get_video2","room_id":39417,"is_vod":0,"sign":"9d56d6ec34ff6522a55a3b931b204b1c"}
         /*yctjFuwawImx/YGYk34okRxXo846xWttT5S+l07qQPlWp2Xb8GCezmH0y93dEhZdWnXtoy8lUf/E
