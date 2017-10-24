@@ -101,15 +101,8 @@ public class MainActivity2 {
                 }
                 try {
                     cdl2.await();
-                    stringBuilder.append(new Gson().toJson(indexBean));
-//                    writerTolocal(stringBuilder.toString()); 
-//                    byte[] utf_8 = .getBytes("UTF-8");
-//                    String json= new String(utf_8, "UTF-8");
-//                    String gbkStr = new String(stringBuilder.toString().getBytes("ISO8859-1"), "GBK"); 
-                    String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
-                    replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
-                    System.out.println(replaceAll);
-                    writerTolocal(replaceAll);
+                    String replaceAll = getDecodeString(stringBuilder, indexBean);
+
                     return replaceAll;
 
                 } catch (InterruptedException e) {
@@ -125,48 +118,14 @@ public class MainActivity2 {
         return null;
     }
 
-    private  void writerTolocal(String string) {
-        FileOutputStream writerStream;
-        try {
-            writerStream = new FileOutputStream("json.txt");
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(writerStream, "UTF-8"));
-            writer.write(string);
-            writer.close();
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
+    private String getDecodeString(StringBuilder stringBuilder, IndexBean indexBean) {
+        stringBuilder.append(new Gson().toJson(indexBean));
+//
+        String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
+        replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+        System.out.println(replaceAll);
+        return replaceAll;
     }
-    private  String readerTolocal() {
-        FileInputStream readerStream;
-        StringBuilder result = new StringBuilder();
-
-        try {
-
-            readerStream = new FileInputStream("json.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(readerStream, "UTF-8"));
-            String s = null;
-            while((s = reader.readLine())!=null){//使用readLine方法，一次读一行
-                result.append(System.lineSeparator()+s);
-            }
-
-            reader.close();
-            return result.toString();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    return "";
-    }
-
 
 
     public  Request parseRequestParams(IndexBean.ListEntity listbean) {

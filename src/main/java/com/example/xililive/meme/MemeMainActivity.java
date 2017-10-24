@@ -15,10 +15,10 @@ import java.util.concurrent.TimeUnit;
 
 public class MemeMainActivity {
 
-    private StringBuilder stringBuilder;
+
     private static String url = "http://live.kbdaiban.com/mapi/index.php";
     private static OkHttpClient client;
-    private  CountDownLatch cdl = null;
+
     private   int kk = 0;
 
     public  String domain() {
@@ -38,7 +38,6 @@ public class MemeMainActivity {
         System.out.println(respon);
         String decrypt = "";
         if(!respon.isEmpty()){
-            BaseEncryptModel baseEncryptModel = new Gson().fromJson(decrypt, BaseEncryptModel.class);
             String substring = respon.substring(11, respon.lastIndexOf("\"}")).replaceAll("\\\\","");
                     decrypt = AESUtil.decrypt(substring, "1400045299000000");
         }
@@ -62,7 +61,7 @@ public class MemeMainActivity {
 
                     @Override
                     public void onFailure(Call arg0, IOException arg1) {
-                        // TODO Auto-generated method stub
+
                         kk++;
                         cdl2.countDown();
 
@@ -74,7 +73,11 @@ public class MemeMainActivity {
                         GsonBuilder gsonBuilder = new GsonBuilder().disableHtmlEscaping();
                         Gson gson = gsonBuilder.create();
                         String result = response.body().string();
-
+                        if(result.isEmpty()){
+                            cdl2.countDown();
+                            kk++;
+                            return;
+                        }
                         if(result.contains("Blocked")){
 
                         }else if(result.contains("error")){
@@ -96,11 +99,6 @@ public class MemeMainActivity {
 
 
 
-//key 1400043672000000
-
-
-
-
                         cdl2.countDown();
                         kk++;
                         System.out.println(kk);
@@ -113,13 +111,7 @@ public class MemeMainActivity {
             }
             try {
                 cdl2.await();
-                stringBuilder.append(new Gson().toJson(indexBean));
-//                    writerTolocal(stringBuilder.toString());
-//                    byte[] utf_8 = .getBytes("UTF-8");
-//                    String json= new String(utf_8, "UTF-8");
-//                    String gbkStr = new String(stringBuilder.toString().getBytes("ISO8859-1"), "GBK");
-                String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
-                replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+                String replaceAll = getDecodeString(stringBuilder, indexBean);
                 System.out.println(replaceAll);
 
                 return replaceAll;
@@ -133,48 +125,12 @@ public class MemeMainActivity {
         return null;
     }
 
-    private  void writerTolocal(String string) {
-        FileOutputStream writerStream;
-        try {
-            writerStream = new FileOutputStream("json.txt");
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(writerStream, "UTF-8"));
-            writer.write(string);
-            writer.close();
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
+    private String getDecodeString(StringBuilder stringBuilder, TjIndexbean indexBean) {
+        stringBuilder.append(new Gson().toJson(indexBean));
+        String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
+        replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+        return replaceAll;
     }
-    private  String readerTolocal() {
-        FileInputStream readerStream;
-        StringBuilder result = new StringBuilder();
-
-        try {
-
-            readerStream = new FileInputStream("json.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(readerStream, "UTF-8"));
-            String s = null;
-            while((s = reader.readLine())!=null){//使用readLine方法，一次读一行
-                result.append(System.lineSeparator()+s);
-            }
-
-            reader.close();
-            return result.toString();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    return "";
-    }
-
 
 
     public  Request parseRequestParams(TjIndexbean.ListBean listbean) {

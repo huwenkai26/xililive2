@@ -1,5 +1,6 @@
 package com.example.xililive;
 
+import com.example.xililive.fanguo.FgMainActivity;
 import com.example.xililive.meme.MemeMainActivity;
 import com.example.xililive.tianjiao.MainActivity;
 import org.springframework.boot.*;
@@ -28,6 +29,12 @@ public class XililiveApplication {
 	@ResponseBody
 	String home3() {
 		return new MemeMainActivity().domain();
+	}
+
+	@RequestMapping("/fanguo")
+	@ResponseBody
+	String fanguo() {
+		return new FgMainActivity().domain();
 	}
 
 	public static void main(String[] args) throws Exception {

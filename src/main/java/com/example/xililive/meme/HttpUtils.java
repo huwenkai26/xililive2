@@ -205,6 +205,7 @@ public class HttpUtils {
             conn.setRequestProperty("connection", "Keep-Alive");
             conn.setRequestProperty("user-agent","Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            conn.setRequestProperty("Cookie", "client_ip=116.24.65.34; nick_name=200025; user_id=200025; user_pwd=c5a5f0a616dbd92846c4551f03a26960; PHPSESSID2=vvh4hmr1tu15s6vtb3qod5gif5; PHPSESSID=6krrhlvj05cvpk4sroaa8b3g73");
 
             conn.connect();
 

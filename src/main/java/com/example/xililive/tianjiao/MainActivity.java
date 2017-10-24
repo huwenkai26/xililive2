@@ -15,10 +15,9 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity {
 
-    private StringBuilder stringBuilder;
+
     private static String url = "http://renminren.com/mapi/index.php";
     private static OkHttpClient client;
-    private  CountDownLatch cdl = null;
     private static  int kk = 0;
 
     public  String domain() {
@@ -48,14 +47,11 @@ public class MainActivity {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
+                        cdl2.countDown();
                     }
                 }
                 final int finalI = i;
-                //判断缓存有没有
-//                    if(roomids.contains(indexBean.list.get(i).room_id)){
-//                        cdl2.countDown();
-//                        lastbean
-//                    }
+
                 if(indexBean.list.get(i).title.isEmpty()){
                     cdl2.countDown();
 
@@ -127,8 +123,7 @@ public class MainActivity {
 //                    byte[] utf_8 = .getBytes("UTF-8");
 //                    String json= new String(utf_8, "UTF-8");
 //                    String gbkStr = new String(stringBuilder.toString().getBytes("ISO8859-1"), "GBK");
-                String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
-                replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+                String replaceAll = getDecodeString(stringBuilder);
                 System.out.println(replaceAll);
 
                 return replaceAll;
@@ -142,48 +137,11 @@ public class MainActivity {
         return null;
     }
 
-    private  void writerTolocal(String string) {
-        FileOutputStream writerStream;
-        try {
-            writerStream = new FileOutputStream("json.txt");
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(writerStream, "UTF-8"));
-            writer.write(string);
-            writer.close();
-
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
+    private String getDecodeString(StringBuilder stringBuilder) {
+        String replaceAll = stringBuilder.toString().replaceAll("\\\\u003d", "=");
+        replaceAll = replaceAll.toString().replaceAll("\\\\u0026", "&");
+        return replaceAll;
     }
-    private  String readerTolocal() {
-        FileInputStream readerStream;
-        StringBuilder result = new StringBuilder();
-
-        try {
-
-            readerStream = new FileInputStream("json.txt");
-            BufferedReader reader = new BufferedReader(new InputStreamReader(readerStream, "UTF-8"));
-            String s = null;
-            while((s = reader.readLine())!=null){//使用readLine方法，一次读一行
-                result.append(System.lineSeparator()+s);
-            }
-
-            reader.close();
-            return result.toString();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    return "";
-    }
-
 
 
     public  Request parseRequestParams(TjIndexbean.ListBean listbean) {
